@@ -1,9 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-function About({}: Props) {
+function About({ pageInfo }: Props) {
   return (
     <div
       className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl 
@@ -17,7 +21,7 @@ function About({}: Props) {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2 }}
-        src="fampic.jpeg"
+        src={urlFor(pageInfo.profilePic).url()}
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg 
         md:w-96 md:h-96 xl:w-[550px] xl:h-[600px]"
       />
@@ -28,21 +32,7 @@ function About({}: Props) {
           <span className="underline decoration-[#556B2F]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-base">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem nulla
-          pharetra diam sit amet nisl suscipit adipiscing. Potenti nullam ac
-          tortor vitae purus faucibus. Nisl nunc mi ipsum faucibus vitae aliquet
-          nec ullamcorper. Sagittis vitae et leo duis ut diam quam nulla
-          porttitor. Massa ultricies mi quis hendrerit dolor. Lectus arcu
-          bibendum at varius vel pharetra vel. Rhoncus aenean vel elit
-          scelerisque mauris pellentesque pulvinar pellentesque habitant.
-          Ultricies mi quis hendrerit dolor. Platea dictumst vestibulum rhoncus
-          est. Vestibulum sed arcu non odio euismod lacinia at quis. Interdum
-          consectetur libero id faucibus nisl tincidunt eget nullam non. Mattis
-          rhoncus urna neque viverra justo. Amet dictum sit amet justo donec
-          enim. Aliquam sem et tortor consequat id porta nibh venenatis cras.
-        </p>
+        <p className="text-base">{pageInfo?.backgroundInformation}</p>
       </div>
     </div>
   );

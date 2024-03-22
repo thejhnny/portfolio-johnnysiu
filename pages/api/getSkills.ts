@@ -10,6 +10,7 @@ const query = groq`
 type Data = {
   skills: Skill[];
 };
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
