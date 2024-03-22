@@ -37,3 +37,4 @@ yarn-error.log*
 *.tsbuildinfo
 
 sanity/node_modules
+pages/studio
