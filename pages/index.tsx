@@ -61,7 +61,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
           <div className="flex items-center justify-center">
             <img
               className="h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
-              src="pfpic.jpeg"
+              src="top.jpeg"
               alt=""
             />
           </div>

@@ -23,7 +23,7 @@ function About({ pageInfo }: Props) {
         transition={{ duration: 1.2 }}
         src={urlFor(pageInfo.profilePic).url()}
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg 
-        md:w-96 md:h-96 xl:w-[550px] xl:h-[600px]"
+        md:w-96 md:h-96"
       />
 
       <div className="space-y-10 px-0 md:px-10">
